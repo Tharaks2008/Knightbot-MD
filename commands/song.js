@@ -86,7 +86,7 @@ async function songCommand(sock, chatId, message) {
             console.error('Error with siputzx API:', e1);
             try {
                 // Try zenkey API as fallback
-                const zenkeyRes = await fetch(`https://api.zenkey.my.id/api/download/ytmp3?apikey=zenkey&url=${encodeURIComponent(videoUrl)}`);
+                const zenkeyRes = await fetch(`https://api.lolhuman.xyz/api/ytaudio?apikey=YOUR_API_KEY&url=YOUTUBE_URL=${encodeURIComponent(videoUrl)}`);
                 const zenkeyData = await zenkeyRes.json();
                 
                 if (zenkeyData && zenkeyData.result && zenkeyData.result.downloadUrl) {
